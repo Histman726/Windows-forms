@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Message Box", "Message Box\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Multiples Forms", "Multiples Forms\Multiples Forms.csproj", "{BD231BBE-C09C-4BC8-AD4A-51B0DB1CDFB4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Comunicacion entre formularios", "Comunicacion entre formularios\Comunicacion entre formularios.csproj", "{7D4E10ED-AFD8-49E0-8025-EC31912C467F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{BD231BBE-C09C-4BC8-AD4A-51B0DB1CDFB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD231BBE-C09C-4BC8-AD4A-51B0DB1CDFB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD231BBE-C09C-4BC8-AD4A-51B0DB1CDFB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D4E10ED-AFD8-49E0-8025-EC31912C467F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D4E10ED-AFD8-49E0-8025-EC31912C467F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D4E10ED-AFD8-49E0-8025-EC31912C467F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D4E10ED-AFD8-49E0-8025-EC31912C467F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

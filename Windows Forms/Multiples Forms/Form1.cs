@@ -21,7 +21,6 @@ namespace Multiples_Forms
         {
             Form2 form = new Form2();
             form.Show();// Te abre el formulario siguiendo permitiendote interactuar con el actual
-
         }
     }
 }

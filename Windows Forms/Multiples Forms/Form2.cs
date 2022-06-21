@@ -20,8 +20,9 @@ namespace Multiples_Forms
         private void btnForm1_Click(object sender, EventArgs e)
         {
             Form1 form = new Form1();
-            form.ShowDialog();// Aqui te muestra el formulario como modal no permitiendote interactuar con la actual
-            
+            form.Show();// Aqui te muestra el formulario como modal no permitiendote interactuar con la actual
+            this.Close();
+            form.Close();
         }
     }
 }
