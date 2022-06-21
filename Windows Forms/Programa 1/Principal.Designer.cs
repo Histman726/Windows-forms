@@ -30,6 +30,7 @@
         {
             this.btn_Saludo = new System.Windows.Forms.Button();
             this.lbl_Saludo = new System.Windows.Forms.Label();
+            this.btn_Despedida = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_Saludo
@@ -55,15 +56,30 @@
             this.lbl_Saludo.TabIndex = 1;
             this.lbl_Saludo.Text = "Saludar";
             // 
-            // Form1
+            // btn_Despedida
+            // 
+            this.btn_Despedida.BackColor = System.Drawing.Color.Brown;
+            this.btn_Despedida.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Despedida.ForeColor = System.Drawing.Color.White;
+            this.btn_Despedida.Location = new System.Drawing.Point(201, 122);
+            this.btn_Despedida.Name = "btn_Despedida";
+            this.btn_Despedida.Size = new System.Drawing.Size(168, 37);
+            this.btn_Despedida.TabIndex = 2;
+            this.btn_Despedida.Text = "Despedida";
+            this.btn_Despedida.UseVisualStyleBackColor = false;
+            this.btn_Despedida.Click += new System.EventHandler(this.btn_Despedida_Click);
+            // 
+            // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(444, 151);
+            this.ClientSize = new System.Drawing.Size(528, 240);
+            this.Controls.Add(this.btn_Despedida);
             this.Controls.Add(this.lbl_Saludo);
             this.Controls.Add(this.btn_Saludo);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "Principal";
+            this.Text = "Program 01";
+            this.Load += new System.EventHandler(this.Principal_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -73,6 +89,7 @@
 
         private System.Windows.Forms.Button btn_Saludo;
         private System.Windows.Forms.Label lbl_Saludo;
+        private System.Windows.Forms.Button btn_Despedida;
     }
 }
 

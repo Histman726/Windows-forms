@@ -22,5 +22,16 @@ namespace Programa_1
         {
             lbl_Saludo.Text = "Hola Mundo";
         }
+
+        private void btn_Despedida_Click(object sender, EventArgs e)
+        {
+            lbl_Saludo.Text = "Adios";
+            this.Text = "Bye";
+        }
+
+        private void Principal_Load(object sender, EventArgs e)
+        {
+            lbl_Saludo.Text = "";
+        }
     }
 }
