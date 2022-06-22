@@ -13,6 +13,7 @@ namespace Comunicacion_entre_formularios
     public partial class Form2 : Form
     {
         private string comentario;
+        private string enviado;
         public Form2(string men)
         {
             InitializeComponent();
@@ -29,6 +30,14 @@ namespace Comunicacion_entre_formularios
             set { 
                 comentario = value;
                 lblComentario.Text = comentario;
+            }
+        }
+        public string Enviado
+        {
+            set
+            {
+                enviado = value;
+                lblEnviado.Text = enviado;
             }
         }
     }

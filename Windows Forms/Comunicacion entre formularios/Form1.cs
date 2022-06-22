@@ -33,6 +33,7 @@ namespace Comunicacion_entre_formularios
 
         private void btnComentario_Click(object sender, EventArgs e)
         {
+            form2.Enviado = "";
             form2.Comentario = txtEnviar.Text;
         }
     }
