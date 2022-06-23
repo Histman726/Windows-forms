@@ -25,6 +25,7 @@ namespace Comunicacion_entre_formularios
             // Creamos la instancia de Formulario 2
             form2 = new Form2(txtEnviar.Text);
 
+            // Envio del dato
             form2.Comentario = txtEnviar.Text;
 
             // Mostramos la forma
@@ -33,6 +34,7 @@ namespace Comunicacion_entre_formularios
 
         private void btnComentario_Click(object sender, EventArgs e)
         {
+            // Envio del dato
             form2.Enviado = "";
             form2.Comentario = txtEnviar.Text;
         }

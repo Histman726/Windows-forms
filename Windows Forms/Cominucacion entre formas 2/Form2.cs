@@ -19,7 +19,7 @@ namespace Cominucacion_entre_formas_2
         {
             InitializeComponent();
         }
-
+        // Propiedades del tipo get para el envio de informacion
         public string Mensaje { get { return mensaje; } }
         public string Contenido { get { return contenido; } }
         private void btnSalir_Click(object sender, EventArgs e)

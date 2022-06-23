@@ -12,6 +12,7 @@ namespace Comunicacion_entre_formularios
 {
     public partial class Form2 : Form
     {
+        // Propiedades de la forma 2
         private string comentario;
         private string enviado;
         public Form2(string men)
@@ -25,6 +26,7 @@ namespace Comunicacion_entre_formularios
             InitializeComponent();
             lblEnviado.Text = "";
         }
+        // Propiedades con set para recibir datos de otro formulario
         public string Comentario
         {
             set { 
