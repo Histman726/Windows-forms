@@ -53,9 +53,14 @@
             this.tspBtnSuma = new System.Windows.Forms.ToolStripButton();
             this.tspBtnMulti = new System.Windows.Forms.ToolStripButton();
             this.tspBtnDiv = new System.Windows.Forms.ToolStripButton();
+            this.stsInformacion = new System.Windows.Forms.StatusStrip();
+            this.tspLblValores = new System.Windows.Forms.ToolStripStatusLabel();
+            this.tspLblOperacion = new System.Windows.Forms.ToolStripStatusLabel();
+            this.tspLblResultado = new System.Windows.Forms.ToolStripStatusLabel();
             this.Menu_Principal.SuspendLayout();
             this.cmnuTxtA.SuspendLayout();
             this.tspOperaciones.SuspendLayout();
+            this.stsInformacion.SuspendLayout();
             this.SuspendLayout();
             // 
             // Menu_Principal
@@ -264,11 +269,48 @@
             this.tspBtnDiv.Text = "Division";
             this.tspBtnDiv.Click += new System.EventHandler(this.MenuDiv_Click);
             // 
+            // stsInformacion
+            // 
+            this.stsInformacion.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.stsInformacion.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tspLblValores,
+            this.tspLblOperacion,
+            this.tspLblResultado});
+            this.stsInformacion.Location = new System.Drawing.Point(0, 337);
+            this.stsInformacion.Name = "stsInformacion";
+            this.stsInformacion.Size = new System.Drawing.Size(396, 30);
+            this.stsInformacion.TabIndex = 5;
+            this.stsInformacion.Text = "statusStrip1";
+            // 
+            // tspLblValores
+            // 
+            this.tspLblValores.AutoSize = false;
+            this.tspLblValores.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Right;
+            this.tspLblValores.BorderStyle = System.Windows.Forms.Border3DStyle.Raised;
+            this.tspLblValores.Name = "tspLblValores";
+            this.tspLblValores.Size = new System.Drawing.Size(80, 24);
+            this.tspLblValores.Text = "A=0, B=0";
+            // 
+            // tspLblOperacion
+            // 
+            this.tspLblOperacion.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Right;
+            this.tspLblOperacion.BorderStyle = System.Windows.Forms.Border3DStyle.Raised;
+            this.tspLblOperacion.Name = "tspLblOperacion";
+            this.tspLblOperacion.Size = new System.Drawing.Size(111, 24);
+            this.tspLblOperacion.Text = "Sin seleccionar";
+            // 
+            // tspLblResultado
+            // 
+            this.tspLblResultado.Name = "tspLblResultado";
+            this.tspLblResultado.Size = new System.Drawing.Size(36, 20);
+            this.tspLblResultado.Text = "R=0";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(396, 367);
+            this.Controls.Add(this.stsInformacion);
             this.Controls.Add(this.tspOperaciones);
             this.Controls.Add(this.lblRes);
             this.Controls.Add(this.txtB);
@@ -283,6 +325,8 @@
             this.cmnuTxtA.ResumeLayout(false);
             this.tspOperaciones.ResumeLayout(false);
             this.tspOperaciones.PerformLayout();
+            this.stsInformacion.ResumeLayout(false);
+            this.stsInformacion.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -313,6 +357,10 @@
         private System.Windows.Forms.ToolStripButton tspBtnSuma;
         private System.Windows.Forms.ToolStripButton tspBtnMulti;
         private System.Windows.Forms.ToolStripButton tspBtnDiv;
+        private System.Windows.Forms.StatusStrip stsInformacion;
+        private System.Windows.Forms.ToolStripStatusLabel tspLblValores;
+        private System.Windows.Forms.ToolStripStatusLabel tspLblOperacion;
+        private System.Windows.Forms.ToolStripStatusLabel tspLblResultado;
     }
 }
 

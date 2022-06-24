@@ -127,6 +127,13 @@
     <value>277, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="tspBtnResta.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEkAAABACAYAAABWfFoUAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAA/SURBVHhe7dBRCQAgEAXB17+EUYymF+F+hANnYAtsAAAA
+        AAAAAADgqV2dQa1qHJMaTGowCQAAAAAAAACAbyQXjmKQ7Zbr85oAAAAASUVORK5CYII=
+</value>
+  </data>
   <data name="tspBtnSuma.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -142,13 +149,6 @@
         g4qpyRLHrvSfyjKlYccmF51ljMU5LsgZwQQjKrarmNXnwpGfMcP70xjrMtnUvglGGLSyXTWM3Jnc8pgJ
         NAPMqc3My2aWBgCvMvsObFjwLzM8Hhtd/0tma8AAO1DOV3yX2RswN92AbVgp3YAhrNSDi98eWffa+znf
         /gAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="tspBtnResta.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAEkAAABACAYAAABWfFoUAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAA/SURBVHhe7dBRCQAgEAXB17+EUYymF+F+hANnYAtsAAAA
-        AAAAAADgqV2dQa1qHJMaTGowCQAAAAAAAACAbyQXjmKQ7Zbr85oAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="tspBtnMulti.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -178,4 +178,7 @@
         rkJggg==
 </value>
   </data>
+  <metadata name="stsInformacion.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>440, 17</value>
+  </metadata>
 </root>

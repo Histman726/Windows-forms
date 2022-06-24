@@ -42,6 +42,11 @@ namespace Menu
 
             r = a + b;
             lblRes.Text = r.ToString();
+
+            // Datos inscritos en el StatusStrip
+            tspLblValores.Text = "A= " + a + " B= " + b;
+            tspLblOperacion.Text = "Suma";
+            tspLblResultado.Text = "R= " + r;
         }
 
         private void MenuResta_Click(object sender, EventArgs e)
@@ -51,6 +56,11 @@ namespace Menu
 
             r = a - b;
             lblRes.Text = r.ToString();
+
+            // Datos inscritos en el StatusStrip
+            tspLblValores.Text = "A= " + a + " B= " + b;
+            tspLblOperacion.Text = "Resta";
+            tspLblResultado.Text = "R= " + r;
         }
 
         private void MenuMulti_Click(object sender, EventArgs e)
@@ -60,6 +70,11 @@ namespace Menu
 
             r = a * b;
             lblRes.Text = r.ToString();
+
+            // Datos inscritos en el StatusStrip
+            tspLblValores.Text = "A= " + a + " B= " + b;
+            tspLblOperacion.Text = "Multiplicación";
+            tspLblResultado.Text = "R= " + r;
         }
 
         private void MenuDiv_Click(object sender, EventArgs e)
@@ -69,6 +84,11 @@ namespace Menu
 
             r = a / b;
             lblRes.Text = r.ToString();
+
+            // Datos inscritos en el StatusStrip
+            tspLblValores.Text = "A= " + a + " B= " + b;
+            tspLblOperacion.Text = "Division";
+            tspLblResultado.Text = "R= " + r;
         }
 
         private void habilitarToolStripMenuItem_CheckedChanged(object sender, EventArgs e)
