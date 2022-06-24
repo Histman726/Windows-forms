@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.Menu_Principal = new System.Windows.Forms.MenuStrip();
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuSalir = new System.Windows.Forms.ToolStripMenuItem();
@@ -37,18 +38,24 @@
             this.MenuResta = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuMulti = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuDiv = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.habilitarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuAcerca = new System.Windows.Forms.ToolStripMenuItem();
             this.txtA = new System.Windows.Forms.TextBox();
-            this.txtB = new System.Windows.Forms.TextBox();
-            this.lblRes = new System.Windows.Forms.Label();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.habilitarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cmnuTxtA = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.Menu_Context_Borrar = new System.Windows.Forms.ToolStripMenuItem();
             this.Menu_Context_Aleatorio = new System.Windows.Forms.ToolStripMenuItem();
+            this.txtB = new System.Windows.Forms.TextBox();
+            this.lblRes = new System.Windows.Forms.Label();
+            this.tspOperaciones = new System.Windows.Forms.ToolStrip();
+            this.tspBtnResta = new System.Windows.Forms.ToolStripButton();
+            this.tspBtnSuma = new System.Windows.Forms.ToolStripButton();
+            this.tspBtnMulti = new System.Windows.Forms.ToolStripButton();
+            this.tspBtnDiv = new System.Windows.Forms.ToolStripButton();
             this.Menu_Principal.SuspendLayout();
             this.cmnuTxtA.SuspendLayout();
+            this.tspOperaciones.SuspendLayout();
             this.SuspendLayout();
             // 
             // Menu_Principal
@@ -76,7 +83,7 @@
             // 
             this.MenuSalir.AutoToolTip = true;
             this.MenuSalir.Name = "MenuSalir";
-            this.MenuSalir.Size = new System.Drawing.Size(224, 26);
+            this.MenuSalir.Size = new System.Drawing.Size(121, 26);
             this.MenuSalir.Text = "Salir";
             this.MenuSalir.ToolTipText = "Quitar la aplicacion";
             this.MenuSalir.Click += new System.EventHandler(this.MenuSalir_Click);
@@ -124,6 +131,21 @@
             this.MenuDiv.Text = "Division";
             this.MenuDiv.Click += new System.EventHandler(this.MenuDiv_Click);
             // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(221, 6);
+            // 
+            // habilitarToolStripMenuItem
+            // 
+            this.habilitarToolStripMenuItem.Checked = true;
+            this.habilitarToolStripMenuItem.CheckOnClick = true;
+            this.habilitarToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.habilitarToolStripMenuItem.Name = "habilitarToolStripMenuItem";
+            this.habilitarToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.habilitarToolStripMenuItem.Text = "Habilitar";
+            this.habilitarToolStripMenuItem.CheckedChanged += new System.EventHandler(this.habilitarToolStripMenuItem_CheckedChanged);
+            // 
             // ayudaToolStripMenuItem
             // 
             this.ayudaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -135,7 +157,7 @@
             // MenuAcerca
             // 
             this.MenuAcerca.Name = "MenuAcerca";
-            this.MenuAcerca.Size = new System.Drawing.Size(224, 26);
+            this.MenuAcerca.Size = new System.Drawing.Size(167, 26);
             this.MenuAcerca.Text = "Acerca de...";
             this.MenuAcerca.Click += new System.EventHandler(this.MenuAcerca_Click);
             // 
@@ -147,6 +169,29 @@
             this.txtA.Size = new System.Drawing.Size(178, 22);
             this.txtA.TabIndex = 1;
             this.txtA.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // cmnuTxtA
+            // 
+            this.cmnuTxtA.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.cmnuTxtA.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.Menu_Context_Borrar,
+            this.Menu_Context_Aleatorio});
+            this.cmnuTxtA.Name = "MenuContextual";
+            this.cmnuTxtA.Size = new System.Drawing.Size(141, 52);
+            // 
+            // Menu_Context_Borrar
+            // 
+            this.Menu_Context_Borrar.Name = "Menu_Context_Borrar";
+            this.Menu_Context_Borrar.Size = new System.Drawing.Size(140, 24);
+            this.Menu_Context_Borrar.Text = "Borrar";
+            this.Menu_Context_Borrar.Click += new System.EventHandler(this.Menu_Context_Borrar_Click);
+            // 
+            // Menu_Context_Aleatorio
+            // 
+            this.Menu_Context_Aleatorio.Name = "Menu_Context_Aleatorio";
+            this.Menu_Context_Aleatorio.Size = new System.Drawing.Size(140, 24);
+            this.Menu_Context_Aleatorio.Text = "Aleatorio";
+            this.Menu_Context_Aleatorio.Click += new System.EventHandler(this.Menu_Context_Aleatorio_Click);
             // 
             // txtB
             // 
@@ -165,49 +210,66 @@
             this.lblRes.TabIndex = 3;
             this.lblRes.Text = "label1";
             // 
-            // toolStripSeparator1
+            // tspOperaciones
             // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(221, 6);
+            this.tspOperaciones.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.tspOperaciones.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tspBtnSuma,
+            this.tspBtnResta,
+            this.tspBtnMulti,
+            this.tspBtnDiv});
+            this.tspOperaciones.Location = new System.Drawing.Point(0, 28);
+            this.tspOperaciones.Name = "tspOperaciones";
+            this.tspOperaciones.Size = new System.Drawing.Size(396, 27);
+            this.tspOperaciones.TabIndex = 4;
+            this.tspOperaciones.Text = "toolStrip1";
             // 
-            // habilitarToolStripMenuItem
+            // tspBtnResta
             // 
-            this.habilitarToolStripMenuItem.Checked = true;
-            this.habilitarToolStripMenuItem.CheckOnClick = true;
-            this.habilitarToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.habilitarToolStripMenuItem.Name = "habilitarToolStripMenuItem";
-            this.habilitarToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.habilitarToolStripMenuItem.Text = "Habilitar";
-            this.habilitarToolStripMenuItem.CheckedChanged += new System.EventHandler(this.habilitarToolStripMenuItem_CheckedChanged);
+            this.tspBtnResta.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tspBtnResta.Image = ((System.Drawing.Image)(resources.GetObject("tspBtnResta.Image")));
+            this.tspBtnResta.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tspBtnResta.Name = "tspBtnResta";
+            this.tspBtnResta.Size = new System.Drawing.Size(29, 24);
+            this.tspBtnResta.Text = "Resta";
+            this.tspBtnResta.Click += new System.EventHandler(this.MenuResta_Click);
             // 
-            // cmnuTxtA
+            // tspBtnSuma
             // 
-            this.cmnuTxtA.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.cmnuTxtA.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.Menu_Context_Borrar,
-            this.Menu_Context_Aleatorio});
-            this.cmnuTxtA.Name = "MenuContextual";
-            this.cmnuTxtA.Size = new System.Drawing.Size(141, 52);
+            this.tspBtnSuma.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tspBtnSuma.Image = ((System.Drawing.Image)(resources.GetObject("tspBtnSuma.Image")));
+            this.tspBtnSuma.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tspBtnSuma.Name = "tspBtnSuma";
+            this.tspBtnSuma.Size = new System.Drawing.Size(29, 24);
+            this.tspBtnSuma.Text = "Suma";
+            this.tspBtnSuma.Click += new System.EventHandler(this.MenuSumar_Click);
             // 
-            // Menu_Context_Borrar
+            // tspBtnMulti
             // 
-            this.Menu_Context_Borrar.Name = "Menu_Context_Borrar";
-            this.Menu_Context_Borrar.Size = new System.Drawing.Size(210, 24);
-            this.Menu_Context_Borrar.Text = "Borrar";
-            this.Menu_Context_Borrar.Click += new System.EventHandler(this.Menu_Context_Borrar_Click);
+            this.tspBtnMulti.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tspBtnMulti.Image = ((System.Drawing.Image)(resources.GetObject("tspBtnMulti.Image")));
+            this.tspBtnMulti.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tspBtnMulti.Name = "tspBtnMulti";
+            this.tspBtnMulti.Size = new System.Drawing.Size(29, 24);
+            this.tspBtnMulti.Text = "Multiplicacion";
+            this.tspBtnMulti.Click += new System.EventHandler(this.MenuMulti_Click);
             // 
-            // Menu_Context_Aleatorio
+            // tspBtnDiv
             // 
-            this.Menu_Context_Aleatorio.Name = "Menu_Context_Aleatorio";
-            this.Menu_Context_Aleatorio.Size = new System.Drawing.Size(210, 24);
-            this.Menu_Context_Aleatorio.Text = "Aleatorio";
-            this.Menu_Context_Aleatorio.Click += new System.EventHandler(this.Menu_Context_Aleatorio_Click);
+            this.tspBtnDiv.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tspBtnDiv.Image = ((System.Drawing.Image)(resources.GetObject("tspBtnDiv.Image")));
+            this.tspBtnDiv.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tspBtnDiv.Name = "tspBtnDiv";
+            this.tspBtnDiv.Size = new System.Drawing.Size(29, 24);
+            this.tspBtnDiv.Text = "Division";
+            this.tspBtnDiv.Click += new System.EventHandler(this.MenuDiv_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(396, 367);
+            this.Controls.Add(this.tspOperaciones);
             this.Controls.Add(this.lblRes);
             this.Controls.Add(this.txtB);
             this.Controls.Add(this.txtA);
@@ -219,6 +281,8 @@
             this.Menu_Principal.ResumeLayout(false);
             this.Menu_Principal.PerformLayout();
             this.cmnuTxtA.ResumeLayout(false);
+            this.tspOperaciones.ResumeLayout(false);
+            this.tspOperaciones.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -244,6 +308,11 @@
         private System.Windows.Forms.ContextMenuStrip cmnuTxtA;
         private System.Windows.Forms.ToolStripMenuItem Menu_Context_Borrar;
         private System.Windows.Forms.ToolStripMenuItem Menu_Context_Aleatorio;
+        private System.Windows.Forms.ToolStrip tspOperaciones;
+        private System.Windows.Forms.ToolStripButton tspBtnResta;
+        private System.Windows.Forms.ToolStripButton tspBtnSuma;
+        private System.Windows.Forms.ToolStripButton tspBtnMulti;
+        private System.Windows.Forms.ToolStripButton tspBtnDiv;
     }
 }
 
