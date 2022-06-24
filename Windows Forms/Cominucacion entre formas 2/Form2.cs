@@ -24,9 +24,19 @@ namespace Cominucacion_entre_formas_2
         public string Contenido { get { return contenido; } }
         private void btnSalir_Click(object sender, EventArgs e)
         {
+            this.Close();
+        }
+
+        private void btnOk_Click(object sender, EventArgs e)
+        {
             // Recepcion del texto introducido en los textbox
-            mensaje=txtMensaje.Text;
-            contenido=txtContenido.Text;
+            mensaje = txtMensaje.Text;
+            contenido = txtContenido.Text;
+            this.Close();
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
             this.Close();
         }
     }

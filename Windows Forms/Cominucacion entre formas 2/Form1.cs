@@ -21,12 +21,18 @@ namespace Cominucacion_entre_formas_2
         {
             //Creacion de una instancia de formulario 2
             Form2 form2 = new Form2();
+            DialogResult res=form2.ShowDialog();
 
-            form2.ShowDialog();
-
-            // Mostrar el texto guarda en las propiedades del formulario 2
-            lblMensaje.Text=form2.Mensaje;
-            lblContenido.Text=form2.Contenido;
+            if (res == DialogResult.OK)
+            {
+                // Mostrar el texto guarda en las propiedades del formulario 2
+                lblMensaje.Text = form2.Mensaje;
+                lblContenido.Text = form2.Contenido;
+            }
+            else if(res == DialogResult.Cancel)
+            {
+                MessageBox.Show("No ejecutaste la operacion");
+            }
         }
     }
 }
