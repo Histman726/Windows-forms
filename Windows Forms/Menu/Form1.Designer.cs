@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.components = new System.ComponentModel.Container();
+            this.Menu_Principal = new System.Windows.Forms.MenuStrip();
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuSalir = new System.Windows.Forms.ToolStripMenuItem();
             this.operacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -43,21 +44,25 @@
             this.lblRes = new System.Windows.Forms.Label();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.habilitarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip1.SuspendLayout();
+            this.cmnuTxtA = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.Menu_Context_Borrar = new System.Windows.Forms.ToolStripMenuItem();
+            this.Menu_Context_Aleatorio = new System.Windows.Forms.ToolStripMenuItem();
+            this.Menu_Principal.SuspendLayout();
+            this.cmnuTxtA.SuspendLayout();
             this.SuspendLayout();
             // 
-            // menuStrip1
+            // Menu_Principal
             // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.Menu_Principal.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.Menu_Principal.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.archivoToolStripMenuItem,
             this.operacionesToolStripMenuItem,
             this.ayudaToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(396, 28);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
+            this.Menu_Principal.Location = new System.Drawing.Point(0, 0);
+            this.Menu_Principal.Name = "Menu_Principal";
+            this.Menu_Principal.Size = new System.Drawing.Size(396, 28);
+            this.Menu_Principal.TabIndex = 0;
+            this.Menu_Principal.Text = "menuStrip1";
             // 
             // archivoToolStripMenuItem
             // 
@@ -136,6 +141,7 @@
             // 
             // txtA
             // 
+            this.txtA.ContextMenuStrip = this.cmnuTxtA;
             this.txtA.Location = new System.Drawing.Point(45, 76);
             this.txtA.Name = "txtA";
             this.txtA.Size = new System.Drawing.Size(178, 22);
@@ -174,6 +180,29 @@
             this.habilitarToolStripMenuItem.Text = "Habilitar";
             this.habilitarToolStripMenuItem.CheckedChanged += new System.EventHandler(this.habilitarToolStripMenuItem_CheckedChanged);
             // 
+            // cmnuTxtA
+            // 
+            this.cmnuTxtA.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.cmnuTxtA.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.Menu_Context_Borrar,
+            this.Menu_Context_Aleatorio});
+            this.cmnuTxtA.Name = "MenuContextual";
+            this.cmnuTxtA.Size = new System.Drawing.Size(141, 52);
+            // 
+            // Menu_Context_Borrar
+            // 
+            this.Menu_Context_Borrar.Name = "Menu_Context_Borrar";
+            this.Menu_Context_Borrar.Size = new System.Drawing.Size(210, 24);
+            this.Menu_Context_Borrar.Text = "Borrar";
+            this.Menu_Context_Borrar.Click += new System.EventHandler(this.Menu_Context_Borrar_Click);
+            // 
+            // Menu_Context_Aleatorio
+            // 
+            this.Menu_Context_Aleatorio.Name = "Menu_Context_Aleatorio";
+            this.Menu_Context_Aleatorio.Size = new System.Drawing.Size(210, 24);
+            this.Menu_Context_Aleatorio.Text = "Aleatorio";
+            this.Menu_Context_Aleatorio.Click += new System.EventHandler(this.Menu_Context_Aleatorio_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -182,13 +211,14 @@
             this.Controls.Add(this.lblRes);
             this.Controls.Add(this.txtB);
             this.Controls.Add(this.txtA);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
+            this.Controls.Add(this.Menu_Principal);
+            this.MainMenuStrip = this.Menu_Principal;
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.Menu_Principal.ResumeLayout(false);
+            this.Menu_Principal.PerformLayout();
+            this.cmnuTxtA.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -196,7 +226,7 @@
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.MenuStrip Menu_Principal;
         private System.Windows.Forms.ToolStripMenuItem archivoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem MenuSalir;
         private System.Windows.Forms.ToolStripMenuItem operacionesToolStripMenuItem;
@@ -211,6 +241,9 @@
         private System.Windows.Forms.Label lblRes;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem habilitarToolStripMenuItem;
+        private System.Windows.Forms.ContextMenuStrip cmnuTxtA;
+        private System.Windows.Forms.ToolStripMenuItem Menu_Context_Borrar;
+        private System.Windows.Forms.ToolStripMenuItem Menu_Context_Aleatorio;
     }
 }
 

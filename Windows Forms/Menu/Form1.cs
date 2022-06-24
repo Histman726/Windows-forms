@@ -76,5 +76,16 @@ namespace Menu
             txtA.Enabled = habilitarToolStripMenuItem.Checked;
             txtB.Enabled = habilitarToolStripMenuItem.Checked;
         }
+
+        private void Menu_Context_Borrar_Click(object sender, EventArgs e)
+        {
+            txtA.Text = "0";
+        }
+
+        private void Menu_Context_Aleatorio_Click(object sender, EventArgs e)
+        {
+            Random r = new Random();
+            txtA.Text = r.Next(1,100).ToString();
+        }
     }
 }
