@@ -41,6 +41,8 @@
             this.txtA = new System.Windows.Forms.TextBox();
             this.txtB = new System.Windows.Forms.TextBox();
             this.lblRes = new System.Windows.Forms.Label();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.habilitarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,9 +69,11 @@
             // 
             // MenuSalir
             // 
+            this.MenuSalir.AutoToolTip = true;
             this.MenuSalir.Name = "MenuSalir";
-            this.MenuSalir.Size = new System.Drawing.Size(121, 26);
+            this.MenuSalir.Size = new System.Drawing.Size(224, 26);
             this.MenuSalir.Text = "Salir";
+            this.MenuSalir.ToolTipText = "Quitar la aplicacion";
             this.MenuSalir.Click += new System.EventHandler(this.MenuSalir_Click);
             // 
             // operacionesToolStripMenuItem
@@ -78,14 +82,18 @@
             this.MenuSumar,
             this.MenuResta,
             this.MenuMulti,
-            this.MenuDiv});
+            this.MenuDiv,
+            this.toolStripSeparator1,
+            this.habilitarToolStripMenuItem});
             this.operacionesToolStripMenuItem.Name = "operacionesToolStripMenuItem";
+            this.operacionesToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.H)));
             this.operacionesToolStripMenuItem.Size = new System.Drawing.Size(106, 24);
             this.operacionesToolStripMenuItem.Text = "Operaciones";
             // 
             // MenuSumar
             // 
             this.MenuSumar.Name = "MenuSumar";
+            this.MenuSumar.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.H)));
             this.MenuSumar.Size = new System.Drawing.Size(224, 26);
             this.MenuSumar.Text = "Suma";
             this.MenuSumar.Click += new System.EventHandler(this.MenuSumar_Click);
@@ -151,6 +159,21 @@
             this.lblRes.TabIndex = 3;
             this.lblRes.Text = "label1";
             // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(221, 6);
+            // 
+            // habilitarToolStripMenuItem
+            // 
+            this.habilitarToolStripMenuItem.Checked = true;
+            this.habilitarToolStripMenuItem.CheckOnClick = true;
+            this.habilitarToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.habilitarToolStripMenuItem.Name = "habilitarToolStripMenuItem";
+            this.habilitarToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.habilitarToolStripMenuItem.Text = "Habilitar";
+            this.habilitarToolStripMenuItem.CheckedChanged += new System.EventHandler(this.habilitarToolStripMenuItem_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -186,6 +209,8 @@
         private System.Windows.Forms.TextBox txtA;
         private System.Windows.Forms.TextBox txtB;
         private System.Windows.Forms.Label lblRes;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem habilitarToolStripMenuItem;
     }
 }
 

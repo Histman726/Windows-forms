@@ -70,5 +70,11 @@ namespace Menu
             r = a / b;
             lblRes.Text = r.ToString();
         }
+
+        private void habilitarToolStripMenuItem_CheckedChanged(object sender, EventArgs e)
+        {
+            txtA.Enabled = habilitarToolStripMenuItem.Checked;
+            txtB.Enabled = habilitarToolStripMenuItem.Checked;
+        }
     }
 }
