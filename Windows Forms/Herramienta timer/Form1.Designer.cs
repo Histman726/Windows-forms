@@ -35,6 +35,8 @@
             this.btnDetener = new System.Windows.Forms.Button();
             this.tbrIntervalo = new System.Windows.Forms.TrackBar();
             this.lblIntervalo = new System.Windows.Forms.Label();
+            this.pbrTrabajo = new System.Windows.Forms.ProgressBar();
+            this.btnCalculo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.tbrIntervalo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -93,11 +95,30 @@
             this.lblIntervalo.TabIndex = 4;
             this.lblIntervalo.Text = "label1";
             // 
+            // pbrTrabajo
+            // 
+            this.pbrTrabajo.Location = new System.Drawing.Point(30, 233);
+            this.pbrTrabajo.Name = "pbrTrabajo";
+            this.pbrTrabajo.Size = new System.Drawing.Size(275, 23);
+            this.pbrTrabajo.TabIndex = 5;
+            // 
+            // btnCalculo
+            // 
+            this.btnCalculo.Location = new System.Drawing.Point(162, 286);
+            this.btnCalculo.Name = "btnCalculo";
+            this.btnCalculo.Size = new System.Drawing.Size(75, 23);
+            this.btnCalculo.TabIndex = 6;
+            this.btnCalculo.Text = "Calculo";
+            this.btnCalculo.UseVisualStyleBackColor = true;
+            this.btnCalculo.Click += new System.EventHandler(this.btnCalculo_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(336, 220);
+            this.ClientSize = new System.Drawing.Size(336, 347);
+            this.Controls.Add(this.btnCalculo);
+            this.Controls.Add(this.pbrTrabajo);
             this.Controls.Add(this.lblIntervalo);
             this.Controls.Add(this.tbrIntervalo);
             this.Controls.Add(this.btnDetener);
@@ -121,6 +142,8 @@
         private System.Windows.Forms.Button btnDetener;
         private System.Windows.Forms.TrackBar tbrIntervalo;
         private System.Windows.Forms.Label lblIntervalo;
+        private System.Windows.Forms.ProgressBar pbrTrabajo;
+        private System.Windows.Forms.Button btnCalculo;
     }
 }
 

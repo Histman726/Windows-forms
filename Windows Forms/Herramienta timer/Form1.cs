@@ -23,13 +23,20 @@ namespace Herramienta_timer
         private void tmrPrueba_Tick(object sender, EventArgs e)
         {
             conteo++;
-            lblValor.Text = conteo.ToString();
+            if (pbrTrabajo.Value < 100)
+            {
+                pbrTrabajo.Value++;
+                lblValor.Text = conteo.ToString();
+            }
+            else if (pbrTrabajo.Value == 100)
+                tmrPrueba.Enabled = false;
         }
 
         private void btnInicio_Click(object sender, EventArgs e)
         {
             tmrPrueba.Enabled = true;
             tmrPrueba.Start();
+            pbrTrabajo.Value = 0;
         }
 
         private void btnDetener_Click(object sender, EventArgs e)
@@ -55,6 +62,16 @@ namespace Herramienta_timer
         private void Form1_Load(object sender, EventArgs e)
         {
             lblIntervalo.Text = tbrIntervalo.Value.ToString();
+        }
+
+        private void btnCalculo_Click(object sender, EventArgs e)
+        {
+            for(int i = 0; i < 100000; i++)
+            {
+                // El proceso
+                if (i % 1000 == 0)
+                    pbrTrabajo.PerformStep();
+            }
         }
     }
 }
