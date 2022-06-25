@@ -36,11 +36,25 @@ namespace Herramienta_timer
         {
             tmrPrueba.Enabled = false;
             tmrPrueba.Stop();
+            tbrIntervalo.Value = tbrIntervalo.Minimum;
+            lblIntervalo.Text = tbrIntervalo.Value.ToString();
+            tmrPrueba.Interval = tbrIntervalo.Value;
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             tmrPrueba.Enabled = false;
+        }
+
+        private void tbrIntervalo_Scroll(object sender, EventArgs e)
+        {
+            lblIntervalo.Text = tbrIntervalo.Value.ToString();
+            tmrPrueba.Interval = tbrIntervalo.Value;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            lblIntervalo.Text = tbrIntervalo.Value.ToString();
         }
     }
 }
