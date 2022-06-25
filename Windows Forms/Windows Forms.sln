@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Menu", "Menu\Menu.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToolStripContainer Uso", "ToolStripContainer Uso\ToolStripContainer Uso.csproj", "{3E707BBE-DF39-4CA4-8951-735D7CACE6E0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Herramienta timer", "Herramienta timer\Herramienta timer.csproj", "{4D4B77B7-7BED-4C9F-A801-AB0D050F4DD8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{3E707BBE-DF39-4CA4-8951-735D7CACE6E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E707BBE-DF39-4CA4-8951-735D7CACE6E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E707BBE-DF39-4CA4-8951-735D7CACE6E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D4B77B7-7BED-4C9F-A801-AB0D050F4DD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D4B77B7-7BED-4C9F-A801-AB0D050F4DD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D4B77B7-7BED-4C9F-A801-AB0D050F4DD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D4B77B7-7BED-4C9F-A801-AB0D050F4DD8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
