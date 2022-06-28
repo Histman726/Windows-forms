@@ -37,6 +37,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Herramienta DataGridView", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Herramienta DomainUpDown", "Herramienta DomainUpDown\Herramienta DomainUpDown.csproj", "{D63C9F25-F716-4CCB-A4EC-69C2D2EFF733}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Herramienta Listbox", "Herramienta Listbox\Herramienta Listbox.csproj", "{C96FF282-6964-46F4-9654-62F410F22E78}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -111,6 +113,10 @@ Global
 		{D63C9F25-F716-4CCB-A4EC-69C2D2EFF733}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D63C9F25-F716-4CCB-A4EC-69C2D2EFF733}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D63C9F25-F716-4CCB-A4EC-69C2D2EFF733}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C96FF282-6964-46F4-9654-62F410F22E78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C96FF282-6964-46F4-9654-62F410F22E78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C96FF282-6964-46F4-9654-62F410F22E78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C96FF282-6964-46F4-9654-62F410F22E78}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
