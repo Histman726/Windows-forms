@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Herramienta CheckedListBox"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Herramienta Combobox", "Herramienta Combobox\Herramienta Combobox.csproj", "{BAD856CF-F36E-4072-9C68-DFCF47A4EABE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Herramienta DataGridView", "Herramienta DataGridView\Herramienta DataGridView.csproj", "{5FA93AFF-2189-4A96-BF13-A75DC126DD11}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,6 +101,10 @@ Global
 		{BAD856CF-F36E-4072-9C68-DFCF47A4EABE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BAD856CF-F36E-4072-9C68-DFCF47A4EABE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BAD856CF-F36E-4072-9C68-DFCF47A4EABE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FA93AFF-2189-4A96-BF13-A75DC126DD11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FA93AFF-2189-4A96-BF13-A75DC126DD11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FA93AFF-2189-4A96-BF13-A75DC126DD11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FA93AFF-2189-4A96-BF13-A75DC126DD11}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
