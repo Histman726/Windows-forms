@@ -21,12 +21,21 @@ namespace Herramienta_ImageList
 
         private void btnCambiar_Click(object sender, EventArgs e)
         {
+            //ImageList
             indice++;
 
             if (indice > 7 || indice<0)
                 indice = 0;
             
             lblFoto.ImageIndex = indice;
+
+            // Picturebox
+            pcbImagen.Image=imlFotos.Images[indice];
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            pcbImagen.Image = imlFotos.Images[indice];
         }
     }
 }

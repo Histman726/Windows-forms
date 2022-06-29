@@ -33,6 +33,8 @@
             this.imlFotos = new System.Windows.Forms.ImageList(this.components);
             this.lblFoto = new System.Windows.Forms.Label();
             this.btnCambiar = new System.Windows.Forms.Button();
+            this.pcbImagen = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbImagen)).BeginInit();
             this.SuspendLayout();
             // 
             // imlFotos
@@ -67,16 +69,27 @@
             this.btnCambiar.UseVisualStyleBackColor = true;
             this.btnCambiar.Click += new System.EventHandler(this.btnCambiar_Click);
             // 
+            // pcbImagen
+            // 
+            this.pcbImagen.Location = new System.Drawing.Point(34, 150);
+            this.pcbImagen.Name = "pcbImagen";
+            this.pcbImagen.Size = new System.Drawing.Size(100, 100);
+            this.pcbImagen.TabIndex = 2;
+            this.pcbImagen.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(423, 383);
+            this.Controls.Add(this.pcbImagen);
             this.Controls.Add(this.btnCambiar);
             this.Controls.Add(this.lblFoto);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pcbImagen)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -86,6 +99,7 @@
         private System.Windows.Forms.ImageList imlFotos;
         private System.Windows.Forms.Label lblFoto;
         private System.Windows.Forms.Button btnCambiar;
+        private System.Windows.Forms.PictureBox pcbImagen;
     }
 }
 
