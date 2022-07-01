@@ -29,6 +29,12 @@
         private void InitializeComponent()
         {
             this.lstvAlimentos = new System.Windows.Forms.ListView();
+            this.txtAlimento = new System.Windows.Forms.TextBox();
+            this.gbGrupos = new System.Windows.Forms.GroupBox();
+            this.rdbCarnes = new System.Windows.Forms.RadioButton();
+            this.rdbFrutas = new System.Windows.Forms.RadioButton();
+            this.btnAdicionar = new System.Windows.Forms.Button();
+            this.gbGrupos.SuspendLayout();
             this.SuspendLayout();
             // 
             // lstvAlimentos
@@ -36,26 +42,87 @@
             this.lstvAlimentos.HideSelection = false;
             this.lstvAlimentos.Location = new System.Drawing.Point(11, 10);
             this.lstvAlimentos.Name = "lstvAlimentos";
-            this.lstvAlimentos.Size = new System.Drawing.Size(629, 265);
+            this.lstvAlimentos.Size = new System.Drawing.Size(506, 265);
             this.lstvAlimentos.TabIndex = 0;
             this.lstvAlimentos.UseCompatibleStateImageBehavior = false;
+            // 
+            // txtAlimento
+            // 
+            this.txtAlimento.Location = new System.Drawing.Point(23, 304);
+            this.txtAlimento.Name = "txtAlimento";
+            this.txtAlimento.Size = new System.Drawing.Size(100, 22);
+            this.txtAlimento.TabIndex = 1;
+            // 
+            // gbGrupos
+            // 
+            this.gbGrupos.Controls.Add(this.btnAdicionar);
+            this.gbGrupos.Controls.Add(this.rdbFrutas);
+            this.gbGrupos.Controls.Add(this.rdbCarnes);
+            this.gbGrupos.Location = new System.Drawing.Point(246, 291);
+            this.gbGrupos.Name = "gbGrupos";
+            this.gbGrupos.Size = new System.Drawing.Size(271, 140);
+            this.gbGrupos.TabIndex = 2;
+            this.gbGrupos.TabStop = false;
+            this.gbGrupos.Text = "Grupos";
+            // 
+            // rdbCarnes
+            // 
+            this.rdbCarnes.AutoSize = true;
+            this.rdbCarnes.Location = new System.Drawing.Point(27, 51);
+            this.rdbCarnes.Name = "rdbCarnes";
+            this.rdbCarnes.Size = new System.Drawing.Size(71, 20);
+            this.rdbCarnes.TabIndex = 0;
+            this.rdbCarnes.Text = "Carnes";
+            this.rdbCarnes.UseVisualStyleBackColor = true;
+            // 
+            // rdbFrutas
+            // 
+            this.rdbFrutas.AutoSize = true;
+            this.rdbFrutas.Checked = true;
+            this.rdbFrutas.Location = new System.Drawing.Point(155, 50);
+            this.rdbFrutas.Name = "rdbFrutas";
+            this.rdbFrutas.Size = new System.Drawing.Size(65, 20);
+            this.rdbFrutas.TabIndex = 1;
+            this.rdbFrutas.TabStop = true;
+            this.rdbFrutas.Text = "Frutas";
+            this.rdbFrutas.UseVisualStyleBackColor = true;
+            // 
+            // btnAdicionar
+            // 
+            this.btnAdicionar.Location = new System.Drawing.Point(90, 90);
+            this.btnAdicionar.Name = "btnAdicionar";
+            this.btnAdicionar.Size = new System.Drawing.Size(75, 23);
+            this.btnAdicionar.TabIndex = 3;
+            this.btnAdicionar.Text = "Agregar";
+            this.btnAdicionar.UseVisualStyleBackColor = true;
+            this.btnAdicionar.Click += new System.EventHandler(this.btnAdicionar_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(565, 450);
+            this.Controls.Add(this.gbGrupos);
+            this.Controls.Add(this.txtAlimento);
             this.Controls.Add(this.lstvAlimentos);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.gbGrupos.ResumeLayout(false);
+            this.gbGrupos.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.ListView lstvAlimentos;
+        private System.Windows.Forms.TextBox txtAlimento;
+        private System.Windows.Forms.GroupBox gbGrupos;
+        private System.Windows.Forms.Button btnAdicionar;
+        private System.Windows.Forms.RadioButton rdbFrutas;
+        private System.Windows.Forms.RadioButton rdbCarnes;
     }
 }
 
