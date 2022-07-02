@@ -36,6 +36,9 @@
             this.rdbCarnes = new System.Windows.Forms.RadioButton();
             this.lblInfo = new System.Windows.Forms.Label();
             this.btnLimpiar = new System.Windows.Forms.Button();
+            this.txtImagenes = new System.Windows.Forms.TextBox();
+            this.btnActualizar = new System.Windows.Forms.Button();
+            this.btnBorrar = new System.Windows.Forms.Button();
             this.gbGrupos.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,7 +55,7 @@
             // 
             // txtAlimento
             // 
-            this.txtAlimento.Location = new System.Drawing.Point(23, 304);
+            this.txtAlimento.Location = new System.Drawing.Point(50, 315);
             this.txtAlimento.Name = "txtAlimento";
             this.txtAlimento.Size = new System.Drawing.Size(100, 22);
             this.txtAlimento.TabIndex = 1;
@@ -120,11 +123,43 @@
             this.btnLimpiar.UseVisualStyleBackColor = true;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
+            // txtImagenes
+            // 
+            this.txtImagenes.Location = new System.Drawing.Point(50, 353);
+            this.txtImagenes.Name = "txtImagenes";
+            this.txtImagenes.Size = new System.Drawing.Size(100, 22);
+            this.txtImagenes.TabIndex = 5;
+            this.txtImagenes.Text = "0";
+            this.txtImagenes.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // btnActualizar
+            // 
+            this.btnActualizar.Location = new System.Drawing.Point(61, 392);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(89, 27);
+            this.btnActualizar.TabIndex = 6;
+            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            // 
+            // btnBorrar
+            // 
+            this.btnBorrar.Location = new System.Drawing.Point(541, 97);
+            this.btnBorrar.Name = "btnBorrar";
+            this.btnBorrar.Size = new System.Drawing.Size(75, 23);
+            this.btnBorrar.TabIndex = 7;
+            this.btnBorrar.Text = "Borrar";
+            this.btnBorrar.UseVisualStyleBackColor = true;
+            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(651, 450);
+            this.Controls.Add(this.btnBorrar);
+            this.Controls.Add(this.btnActualizar);
+            this.Controls.Add(this.txtImagenes);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.lblInfo);
             this.Controls.Add(this.gbGrupos);
@@ -150,6 +185,9 @@
         private System.Windows.Forms.RadioButton rdbCarnes;
         private System.Windows.Forms.Label lblInfo;
         private System.Windows.Forms.Button btnLimpiar;
+        private System.Windows.Forms.TextBox txtImagenes;
+        private System.Windows.Forms.Button btnActualizar;
+        private System.Windows.Forms.Button btnBorrar;
     }
 }
 

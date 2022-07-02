@@ -80,5 +80,16 @@ namespace Herramienta_ListView
             lstvAlimentos.Items.Clear();
             lblInfo.Text = "";
         }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            lstvAlimentos.SelectedItems[0].SubItems[0].Text=txtAlimento.Text;
+            lstvAlimentos.SelectedItems[0].ImageIndex =Convert.ToInt32( txtImagenes.Text);
+        }
+
+        private void btnBorrar_Click(object sender, EventArgs e)
+        {
+            lstvAlimentos.Items.RemoveAt(lstvAlimentos.SelectedIndices[0]);
+        }
     }
 }
