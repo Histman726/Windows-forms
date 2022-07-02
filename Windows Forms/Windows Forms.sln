@@ -47,6 +47,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Herramienta ListView", "Her
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Herramienta ColorDialog", "Herramienta ColorDialog\Herramienta ColorDialog.csproj", "{D0A15EB1-2F97-4993-A053-C60D309BE24E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clase Datetime", "Clase Datetime\Clase Datetime.csproj", "{09C8E499-8D67-49A0-8CB8-896B03ACB531}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -141,6 +143,10 @@ Global
 		{D0A15EB1-2F97-4993-A053-C60D309BE24E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D0A15EB1-2F97-4993-A053-C60D309BE24E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D0A15EB1-2F97-4993-A053-C60D309BE24E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09C8E499-8D67-49A0-8CB8-896B03ACB531}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09C8E499-8D67-49A0-8CB8-896B03ACB531}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09C8E499-8D67-49A0-8CB8-896B03ACB531}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09C8E499-8D67-49A0-8CB8-896B03ACB531}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
