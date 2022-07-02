@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Herramienta_ListView
 {
@@ -21,12 +22,31 @@ namespace Herramienta_ListView
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // Cremos un ImageList
+            ImageList misImagenes=new ImageList();
+            misImagenes.ImageSize = new Size(200,200);
+
+            // Obteniendo listado de imagenes
+            string[] images = Directory.GetFiles(@"C:\Users\monic\Documents\personal\Windows forms\Windows Forms\Herramienta ListView\bin\Debug\Imagenes");
+
+            // Cargamos los archivos
+            try
+            {
+                foreach(string image in images)
+                    misImagenes.Images.Add(Image.FromFile(image));
+            }catch
+            {
+                MessageBox.Show("No se han podido cargar los archivos","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+
+            lstvAlimentos.SmallImageList = misImagenes;
+
             // Frutas
-            lstvAlimentos.Items.Add(new ListViewItem("Manzana",frutas));
-            lstvAlimentos.Items.Add(new ListViewItem("Pera",frutas));
-            lstvAlimentos.Items.Add(new ListViewItem("Sandia",frutas));
-            lstvAlimentos.Items.Add(new ListViewItem("Melon",frutas));
-            lstvAlimentos.Items.Add(new ListViewItem("Ciruela",frutas));
+            lstvAlimentos.Items.Add(new ListViewItem("Manzana",1,frutas));
+            lstvAlimentos.Items.Add(new ListViewItem("Pera",3,frutas));
+            lstvAlimentos.Items.Add(new ListViewItem("Sandia",4,frutas));
+            lstvAlimentos.Items.Add(new ListViewItem("Melon",2,frutas));
+            lstvAlimentos.Items.Add(new ListViewItem("Ciruela",0,frutas));
 
             // Carnes
             lstvAlimentos.Items.Add(new ListViewItem("Pollo",carnes));
@@ -48,6 +68,17 @@ namespace Herramienta_ListView
                 lstvAlimentos.Items.Add(new ListViewItem(txtAlimento.Text, frutas));
             }
             txtAlimento.Clear();
+        }
+
+        private void lstvAlimentos_MouseClick(object sender, MouseEventArgs e)
+        {
+            lblInfo.Text = lstvAlimentos.SelectedItems[0].SubItems[0].Text;
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            lstvAlimentos.Items.Clear();
+            lblInfo.Text = "";
         }
     }
 }

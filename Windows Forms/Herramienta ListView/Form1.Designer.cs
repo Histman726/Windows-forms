@@ -31,9 +31,11 @@
             this.lstvAlimentos = new System.Windows.Forms.ListView();
             this.txtAlimento = new System.Windows.Forms.TextBox();
             this.gbGrupos = new System.Windows.Forms.GroupBox();
-            this.rdbCarnes = new System.Windows.Forms.RadioButton();
-            this.rdbFrutas = new System.Windows.Forms.RadioButton();
             this.btnAdicionar = new System.Windows.Forms.Button();
+            this.rdbFrutas = new System.Windows.Forms.RadioButton();
+            this.rdbCarnes = new System.Windows.Forms.RadioButton();
+            this.lblInfo = new System.Windows.Forms.Label();
+            this.btnLimpiar = new System.Windows.Forms.Button();
             this.gbGrupos.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,6 +47,8 @@
             this.lstvAlimentos.Size = new System.Drawing.Size(506, 265);
             this.lstvAlimentos.TabIndex = 0;
             this.lstvAlimentos.UseCompatibleStateImageBehavior = false;
+            this.lstvAlimentos.View = System.Windows.Forms.View.SmallIcon;
+            this.lstvAlimentos.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lstvAlimentos_MouseClick);
             // 
             // txtAlimento
             // 
@@ -65,15 +69,15 @@
             this.gbGrupos.TabStop = false;
             this.gbGrupos.Text = "Grupos";
             // 
-            // rdbCarnes
+            // btnAdicionar
             // 
-            this.rdbCarnes.AutoSize = true;
-            this.rdbCarnes.Location = new System.Drawing.Point(27, 51);
-            this.rdbCarnes.Name = "rdbCarnes";
-            this.rdbCarnes.Size = new System.Drawing.Size(71, 20);
-            this.rdbCarnes.TabIndex = 0;
-            this.rdbCarnes.Text = "Carnes";
-            this.rdbCarnes.UseVisualStyleBackColor = true;
+            this.btnAdicionar.Location = new System.Drawing.Point(90, 90);
+            this.btnAdicionar.Name = "btnAdicionar";
+            this.btnAdicionar.Size = new System.Drawing.Size(75, 23);
+            this.btnAdicionar.TabIndex = 3;
+            this.btnAdicionar.Text = "Agregar";
+            this.btnAdicionar.UseVisualStyleBackColor = true;
+            this.btnAdicionar.Click += new System.EventHandler(this.btnAdicionar_Click);
             // 
             // rdbFrutas
             // 
@@ -87,21 +91,42 @@
             this.rdbFrutas.Text = "Frutas";
             this.rdbFrutas.UseVisualStyleBackColor = true;
             // 
-            // btnAdicionar
+            // rdbCarnes
             // 
-            this.btnAdicionar.Location = new System.Drawing.Point(90, 90);
-            this.btnAdicionar.Name = "btnAdicionar";
-            this.btnAdicionar.Size = new System.Drawing.Size(75, 23);
-            this.btnAdicionar.TabIndex = 3;
-            this.btnAdicionar.Text = "Agregar";
-            this.btnAdicionar.UseVisualStyleBackColor = true;
-            this.btnAdicionar.Click += new System.EventHandler(this.btnAdicionar_Click);
+            this.rdbCarnes.AutoSize = true;
+            this.rdbCarnes.Location = new System.Drawing.Point(27, 51);
+            this.rdbCarnes.Name = "rdbCarnes";
+            this.rdbCarnes.Size = new System.Drawing.Size(71, 20);
+            this.rdbCarnes.TabIndex = 0;
+            this.rdbCarnes.Text = "Carnes";
+            this.rdbCarnes.UseVisualStyleBackColor = true;
+            // 
+            // lblInfo
+            // 
+            this.lblInfo.AutoSize = true;
+            this.lblInfo.Location = new System.Drawing.Point(538, 23);
+            this.lblInfo.Name = "lblInfo";
+            this.lblInfo.Size = new System.Drawing.Size(44, 16);
+            this.lblInfo.TabIndex = 3;
+            this.lblInfo.Text = "label1";
+            // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.Location = new System.Drawing.Point(541, 56);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(75, 23);
+            this.btnLimpiar.TabIndex = 4;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(565, 450);
+            this.ClientSize = new System.Drawing.Size(651, 450);
+            this.Controls.Add(this.btnLimpiar);
+            this.Controls.Add(this.lblInfo);
             this.Controls.Add(this.gbGrupos);
             this.Controls.Add(this.txtAlimento);
             this.Controls.Add(this.lstvAlimentos);
@@ -123,6 +148,8 @@
         private System.Windows.Forms.Button btnAdicionar;
         private System.Windows.Forms.RadioButton rdbFrutas;
         private System.Windows.Forms.RadioButton rdbCarnes;
+        private System.Windows.Forms.Label lblInfo;
+        private System.Windows.Forms.Button btnLimpiar;
     }
 }
 
