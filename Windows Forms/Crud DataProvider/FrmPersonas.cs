@@ -26,32 +26,11 @@ namespace Crud_DataProvider
             {
                 if (ID == null)
                 {
-                    using (SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-BC85JKD\SQL;Initial Catalog=CRUDWF;Integrated Security=True"))
-                    {
-                        string sql = "Insert into Personas (name,age) values (@name,@age)";
-                        SqlCommand cmd = new SqlCommand(sql, conn);
-                        cmd.CommandType = CommandType.Text;
-                        cmd.Parameters.AddWithValue("@name", txtName.Text);
-                        cmd.Parameters.AddWithValue("@age", nudAge.Value);
-                        conn.Open();
-                        cmd.ExecuteNonQuery();
-                        conn.Close();
-                    }
+                    CRUD.Guardar(txtName.Text,(int)nudAge.Value);
                 }
                 else
                 {
-                    using (SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-BC85JKD\SQL;Initial Catalog=CRUDWF;Integrated Security=True"))
-                    {
-                        string sql = "Update Personas set name=@name, age=@age where id=@id";
-                        SqlCommand cmd=new SqlCommand(sql, conn);
-                        cmd.CommandType = CommandType.Text;
-                        cmd.Parameters.AddWithValue("@name", txtName.Text);
-                        cmd.Parameters.AddWithValue("@age", nudAge.Value);
-                        cmd.Parameters.AddWithValue("@id", (int)ID);
-                        conn.Open();
-                        cmd.ExecuteNonQuery();
-                        conn.Close();
-                    }
+                    CRUD.Actualizar(txtName.Text, (int)nudAge.Value, (int)ID);
                 }
                 this.Close();
             }
@@ -65,18 +44,9 @@ namespace Crud_DataProvider
         {
             if(ID != null)
             {
-                using (SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-BC85JKD\SQL;Initial Catalog=CRUDWF;Integrated Security=True"))
-                {
-                    string sql = "select * from Personas where id=@id";
-                    SqlCommand cmd = new SqlCommand(sql,con);
-                    cmd.Parameters.AddWithValue("@id", ID);
-                    cmd.CommandType = CommandType.Text;
-                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                    DataTable dt=new DataTable();
-                    adapter.Fill(dt);
-                    txtName.Text = dt.Rows[0]["name"].ToString();
-                    nudAge.Value = Convert.ToInt32(dt.Rows[0]["age"]);
-                }
+                CRUD.SelectID((int)ID,out string name,out decimal age);
+                txtName.Text = name;
+                nudAge.Value = age;
             }
         }
     }

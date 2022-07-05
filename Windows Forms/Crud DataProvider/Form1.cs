@@ -28,18 +28,10 @@ namespace Crud_DataProvider
                 return null;
             }
         }
-        private void Refrescar()
+        public void Refrescar()
         {
-            using (SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-BC85JKD\SQL;Initial Catalog=CRUDWF;Integrated Security=True"))
-            {
-                string query = "Select * from Personas";
-                conn.Open();
-                SqlDataAdapter adapter = new SqlDataAdapter(query,conn);
-                DataTable dt=new DataTable();
-                adapter.Fill(dt);
-                dtgvPersonas.DataSource=dt;
-                conn.Close();
-            }
+            DataTable dt = CRUD.Refrescar();
+            dtgvPersonas.DataSource = dt;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -77,17 +69,8 @@ namespace Crud_DataProvider
                 var mes = MessageBox.Show("Estas seguro de eliminar", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (mes == DialogResult.Yes)
                 {
-                    using (SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-BC85JKD\SQL;Initial Catalog=CRUDWF;Integrated Security=True"))
-                    {
-                        string sql = "Delete from Personas where id=@id";
-                        SqlCommand cmd = new SqlCommand(sql,conn);
-                        cmd.CommandType = CommandType.Text;
-                        cmd.Parameters.AddWithValue("@id", (int)id);
-                        conn.Open();
-                        cmd.ExecuteNonQuery();
-                        conn.Close();
-                    }
-                        Refrescar();
+                    CRUD.Elimininar((int)id);
+                    Refrescar();
                 }
             }
             else
