@@ -49,6 +49,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Herramienta ColorDialog", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clase Datetime", "Clase Datetime\Clase Datetime.csproj", "{09C8E499-8D67-49A0-8CB8-896B03ACB531}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataSet CRUD", "CRUD Dataset, Dataprovider, Entity Framework\DataSet CRUD.csproj", "{7CC8FDA0-9D37-4241-A493-0C2CD791F831}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CRUD", "CRUD", "{F17D518D-B516-42EC-A124-A63799BE4C67}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -147,9 +151,16 @@ Global
 		{09C8E499-8D67-49A0-8CB8-896B03ACB531}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{09C8E499-8D67-49A0-8CB8-896B03ACB531}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{09C8E499-8D67-49A0-8CB8-896B03ACB531}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CC8FDA0-9D37-4241-A493-0C2CD791F831}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CC8FDA0-9D37-4241-A493-0C2CD791F831}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CC8FDA0-9D37-4241-A493-0C2CD791F831}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CC8FDA0-9D37-4241-A493-0C2CD791F831}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7CC8FDA0-9D37-4241-A493-0C2CD791F831} = {F17D518D-B516-42EC-A124-A63799BE4C67}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EDD9C2AC-9175-4C37-B955-E95A9EEA5D53}
