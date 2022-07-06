@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -72,7 +73,21 @@ namespace Crud_Tablas_relacionadas
                 if (id == null)
                     de.Productos.Add(p);
                 else
-                    de.Entry(p).State = System.Data.Entity.EntityState.Modified;
+                {
+                    using (SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-BC85JKD\SQL;Initial Catalog=CRUDWF;Integrated Security=True"))
+                    {
+                        string sql = "Update Productos set nom_Producto=@nombre, descrip_Producto=@des,cod_Categoria=@cat where id_Productos=@id";
+                        SqlCommand cmd = new SqlCommand(sql,con);
+                        cmd.CommandType = CommandType.Text;
+                        cmd.Parameters.AddWithValue("@nombre",p.nom_Producto);
+                        cmd.Parameters.AddWithValue("@des", p.descrip_Producto);
+                        cmd.Parameters.AddWithValue("@cat",p.cod_Categoria);
+                        cmd.Parameters.AddWithValue("@id",p.id_Productos);
+                        con.Open();
+                        cmd.ExecuteNonQuery();
+                        con.Close();
+                    }
+                }    
                 de.SaveChanges();
                 
                 this.Close();
