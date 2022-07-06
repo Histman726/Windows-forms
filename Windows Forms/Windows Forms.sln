@@ -57,6 +57,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Crud DataProvider", "Crud D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRUD Entity Framework  DateTime", "CRUD Entity Framework  DateTime\CRUD Entity Framework  DateTime.csproj", "{EBBA7C9C-79A3-44F8-B6ED-C84B19F7223C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Crud Tablas relacionadas", "Crud Tablas relacionadas\Crud Tablas relacionadas.csproj", "{FEAE54E1-C735-4057-A494-D69473ECF1E2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -167,14 +169,20 @@ Global
 		{EBBA7C9C-79A3-44F8-B6ED-C84B19F7223C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EBBA7C9C-79A3-44F8-B6ED-C84B19F7223C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EBBA7C9C-79A3-44F8-B6ED-C84B19F7223C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEAE54E1-C735-4057-A494-D69473ECF1E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEAE54E1-C735-4057-A494-D69473ECF1E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEAE54E1-C735-4057-A494-D69473ECF1E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEAE54E1-C735-4057-A494-D69473ECF1E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{47A371C3-A8CA-4815-A463-9041B5D767D4} = {F17D518D-B516-42EC-A124-A63799BE4C67}
 		{7CC8FDA0-9D37-4241-A493-0C2CD791F831} = {F17D518D-B516-42EC-A124-A63799BE4C67}
 		{9E1BDA8F-4CC2-4458-949B-7325CB06067A} = {F17D518D-B516-42EC-A124-A63799BE4C67}
 		{EBBA7C9C-79A3-44F8-B6ED-C84B19F7223C} = {F17D518D-B516-42EC-A124-A63799BE4C67}
+		{FEAE54E1-C735-4057-A494-D69473ECF1E2} = {F17D518D-B516-42EC-A124-A63799BE4C67}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EDD9C2AC-9175-4C37-B955-E95A9EEA5D53}
